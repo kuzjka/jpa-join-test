@@ -6,4 +6,5 @@ import ua.kuzjka.jpatest.model.Brand;
 
 @Repository
 public interface BrandRepository extends JpaRepository<Brand, Integer> {
+    Brand findByName(String name);
 }

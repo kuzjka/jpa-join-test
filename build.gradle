@@ -15,6 +15,8 @@ dependencies {
   implementation 'com.h2database:h2'
   implementation 'org.flywaydb:flyway-core'
 
+  implementation 'com.fasterxml.jackson.dataformat:jackson-dataformat-yaml'
+
   testImplementation 'org.springframework.boot:spring-boot-starter-test'
 }
 

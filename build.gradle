@@ -14,5 +14,11 @@ dependencies {
 
   implementation 'com.h2database:h2'
   implementation 'org.flywaydb:flyway-core'
+
+  testImplementation 'org.springframework.boot:spring-boot-starter-test'
 }
 
+test {
+  useJUnitPlatform()
+  jvmArgs '-Djdk.attach.allowAttachSelf=true'
+}

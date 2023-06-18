@@ -10,7 +10,7 @@ import java.util.List;
 
 @Service
 @Profile("jpa-distinct")
-public class JpaJoinImpl implements ProductService {
+public class JpaDistinctImpl implements ProductService {
     @Autowired
     private ProductRepository repository;
 

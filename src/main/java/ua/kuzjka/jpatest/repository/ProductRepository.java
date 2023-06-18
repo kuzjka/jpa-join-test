@@ -11,7 +11,7 @@ import java.util.List;
 
 @Repository
 public interface ProductRepository extends JpaRepository<Product, Integer> {
-    List<Product> findAllByBrand(Brand brand);
+    List<Product> findAllByTypeName(String name);
 
     @Query("select b from Brand b join b.products p where p in (select p from Product p where p.type=:type)")
     List<Brand> findBrandsForTypeSubQuery(ProductType type);

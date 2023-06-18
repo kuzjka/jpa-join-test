@@ -22,7 +22,7 @@ import java.util.List;
 import java.util.OptionalDouble;
 import java.util.Random;
 
-@ActiveProfiles("jpa-distinct")
+@ActiveProfiles("filtered-hash-set")
 @SpringBootTest
 public class JoinTest {
     private static final Logger logger = LoggerFactory.getLogger(JoinTest.class);

@@ -3,9 +3,7 @@ package ua.kuzjka.jpatest.service;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Profile;
 import org.springframework.stereotype.Service;
-import ua.kuzjka.jpatest.model.Brand;
 import ua.kuzjka.jpatest.model.Product;
-import ua.kuzjka.jpatest.repository.BrandRepository;
 import ua.kuzjka.jpatest.repository.ProductRepository;
 
 import java.util.ArrayList;
@@ -15,7 +13,7 @@ import java.util.Set;
 
 @Service
 @Profile("hash-set")
-public class HashSetProductServiceImpl implements ProductService {
+public class HashSetImpl implements ProductService {
     @Autowired
     private ProductRepository repository;
 

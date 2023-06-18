@@ -2,6 +2,8 @@ package ua.kuzjka.jpatest.model;
 
 import jakarta.persistence.*;
 
+import java.util.List;
+
 @Entity
 @Table(name = "brands")
 public class Brand {
@@ -11,6 +13,9 @@ public class Brand {
     private Integer id;
 
     private String name;
+
+    @OneToMany(mappedBy = "brand", fetch = FetchType.LAZY)
+    private List<Product> products;
 
     public Brand() {
     }
@@ -33,5 +38,13 @@ public class Brand {
 
     public void setName(String name) {
         this.name = name;
+    }
+
+    public List<Product> getProducts() {
+        return products;
+    }
+
+    public void setProducts(List<Product> products) {
+        this.products = products;
     }
 }

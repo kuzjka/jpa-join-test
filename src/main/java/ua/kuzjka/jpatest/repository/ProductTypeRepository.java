@@ -6,4 +6,5 @@ import ua.kuzjka.jpatest.model.ProductType;
 
 @Repository
 public interface ProductTypeRepository extends JpaRepository<ProductType, Integer> {
+    ProductType findByName(String name);
 }
